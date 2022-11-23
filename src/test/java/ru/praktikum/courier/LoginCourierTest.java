@@ -26,7 +26,7 @@ public class LoginCourierTest {
     @DisplayName("Successful courier authorization")
     @Description("Checking successful client authorization")
     public void successfulClientAuthorization(){
-        courier = CourierGenerator.getDefaultCourier();
+        courier = CourierGenerator.getRandomCourier();
         courierClient.createCourier(courier);
         id = courierClient.loginCourier(Credentials.from(courier)).extract().path("id");
         ValidatableResponse response = courierClient.loginCourier(Credentials.from(courier));

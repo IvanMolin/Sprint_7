@@ -29,11 +29,11 @@ public class LoginCourierParameterTest {
     @Parameterized.Parameters
     public static Object[][] getDataLoginCourierTest(){
         return new Object[][]{
-                {CourierGenerator.getDefaultCourier(), CourierGenerator.enterOnlyLoginCourier(), 400, "Недостаточно данных для входа"},
-                {CourierGenerator.getDefaultCourier(), CourierGenerator.enterOnlyPasswordCourier(), 400, "Недостаточно данных для входа"},
-                {CourierGenerator.getDefaultCourier(), CourierGenerator.enterIncorrectLoginCourier(), 404, "Учетная запись не найдена"},
-                {CourierGenerator.getDefaultCourier(), CourierGenerator.enterIncorrectPasswordCourier(), 404, "Учетная запись не найдена"},
-                {CourierGenerator.getDefaultCourier(), CourierGenerator.getNonExistentCourier(), 404, "Учетная запись не найдена"},
+                {CourierGenerator.getRandomCourier(), CourierGenerator.enterOnlyLoginCourier(), 400, "Недостаточно данных для входа"},
+                {CourierGenerator.getRandomCourier(), CourierGenerator.enterOnlyPasswordCourier(), 400, "Недостаточно данных для входа"},
+                {CourierGenerator.getRandomCourier(), CourierGenerator.enterIncorrectLoginCourier(), 404, "Учетная запись не найдена"},
+                {CourierGenerator.getRandomCourier(), CourierGenerator.enterIncorrectPasswordCourier(), 404, "Учетная запись не найдена"},
+                {CourierGenerator.getRandomCourier(), CourierGenerator.getNonExistentCourier(), 404, "Учетная запись не найдена"},
         };
     }
 

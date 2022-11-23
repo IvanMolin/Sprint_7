@@ -35,7 +35,7 @@ public class CreateCourierParameterTest {
     public void setUp(){
       courierClient = new CourierClient();
     }
-
+// Не использую удаление данных, так как в данном тесте проверяются только негативные сценарии по созданию курьера
     @Test
     @DisplayName("Unable to create courier")
     @Description("Unable to create a courier without filling in the fields 'Login','Password'")

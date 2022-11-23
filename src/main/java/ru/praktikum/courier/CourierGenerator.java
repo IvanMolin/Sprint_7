@@ -1,8 +1,11 @@
 package ru.praktikum.courier;
 
+import java.util.Random;
+
 public class CourierGenerator {
-    public static Courier getDefaultCourier(){
-        return new Courier("Fedosov","1q2w3e$R","Fedya");
+
+    public static Courier getRandomCourier(){
+        return new Courier("NameCourier"+new Random().nextInt(500), "1q2w3e"+new Random().nextInt(500),"Alex"+new Random().nextInt(500));
     }
 
     public static Courier getOnlyLoginCourier(){

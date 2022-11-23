@@ -3,7 +3,8 @@ package ru.praktikum.order;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Before;
 import org.junit.Test;
-import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.greaterThan;
 import io.qameta.allure.junit4.DisplayName;
 import io.qameta.allure.Description;
 
@@ -20,6 +21,6 @@ public class GettingListOrdersTest {
     @Description("Checking for receiving a list of orders without courierId")
     public void getListOrders(){
         ValidatableResponse response = orderClient.getListOfOrders();
-        response.assertThat().body("orders", notNullValue()).and().statusCode(200);
+        response.assertThat().body("orders", hasSize(greaterThan(1))).and().statusCode(200);
     }
 }

@@ -16,7 +16,7 @@ public class CreateCourierTest {
     @Before
     public void setUp(){
         courierClient = new CourierClient();
-        courier = CourierGenerator.getDefaultCourier();
+        courier = CourierGenerator.getRandomCourier();
     }
 
     @After
